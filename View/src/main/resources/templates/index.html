@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link type="image/x-icon" href="/static/img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+<nav th:replace="~{frag :: nav}"></nav>
+
+<main>
+    <div class="column framed w100">
+        <strong>Lombard Services</strong>
+        <div>Всё что Вам нужно для ломбардного бизнеса!</div>
+    </div>
+
+    <div class="row framed w100">
+        <a class="blue-btn" th:href="@{/client-list/}">Клиенты</a>
+        <a class="blue-btn" th:href="@{/loan-list/}">Займы</a>
+        <a class="blue-btn align-left" th:href="@{/property-list/}">Имущество</a>
+    </div>
+</main>
+</body>
+</html>

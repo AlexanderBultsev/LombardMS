@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Клиенты</title>
+    <link type="image/x-icon" href="/static/img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+<nav th:replace="~{frag :: nav}"></nav>
+
+<main>
+    <div class="row framed w100">
+        <strong>Клиенты</strong>
+    </div>
+
+    <div class="column" th:switch="${clients.size()}">
+        <div class="info framed" th:case="0">Нет клиентов</div>
+        <div class="row framed" th:each="client : ${clients}">
+            <div>
+                <strong>Имя</strong>
+                <div th:text="${client.getName()}"></div>
+            </div>
+            <div>
+                <strong>Телефон</strong>
+                <div th:text="${client.getPhone()}"></div>
+            </div>
+            <div>
+                <strong>Баланс</strong>
+                <div th:text="${client.getBalance()}"></div>
+            </div>
+            <a class="blue-btn align-right" th:href="@{/client-detail/{id}/(id=${client.getId()})}">→</a>
+        </div>
+    </div>
+</main>
+<script src="/static/js/script.js"></script>
+</body>
+</html>

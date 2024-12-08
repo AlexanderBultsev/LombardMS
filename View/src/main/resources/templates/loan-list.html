@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Займы</title>
+    <link type="image/x-icon" href="/static/img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+<nav th:replace="~{frag :: nav}"></nav>
+
+<main>
+    <div class="row framed w100">
+        <strong>Займы</strong>
+    </div>
+
+    <div class="column" th:switch="${loans.size()}">
+        <div class="info framed" th:case="0">Нет займов</div>
+        <div class="row framed" th:each="loan : ${loans}">
+            <div>
+                <strong>Клиент</strong>
+                <div th:text="${loan.getClientId()}"></div>
+            </div>
+            <div>
+                <strong>Имущество</strong>
+                <div th:text="${loan.getPropertyId()}"></div>
+            </div>
+            <div>
+                <strong>Открыт</strong>
+                <div th:text="${#dates.format(loan.getOpen(), 'dd.MM.yyyy')}"></div>
+            </div>
+            <div>
+                <strong>Закрыт</strong>
+                <div th:text="${#dates.format(loan.getClose(), 'dd.MM.yyyy')}"></div>
+            </div>
+            <div>
+                <strong>Статус</strong>
+                <div th:text="${loan.getStatus()}"></div>
+            </div>
+            <a class="blue-btn align-right" th:href="@{/loan-detail/{id}/(id=${loan.getId()})}">→</a>
+        </div>
+    </div>
+</main>
+<script src="/static/js/script.js"></script>
+</body>
+</html>

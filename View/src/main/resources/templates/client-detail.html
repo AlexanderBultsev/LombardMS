@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Клиент</title>
+    <link type="image/x-icon" href="/static/img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+<nav th:replace="~{frag :: nav}"></nav>
+
+<main>
+    <div class="row framed w100">
+        <div class="column">
+            <strong class="align-left">Информация о клиенте</strong>
+            <div class="row framed">
+                <div>
+                    <strong>Имя</strong>
+                    <div th:text="${client.getName()}"></div>
+                </div>
+                <div>
+                    <strong>Телефон</strong>
+                    <div th:text="${client.getPhone()}"></div>
+                </div>
+                <div>
+                    <strong>Баланс</strong>
+                    <div th:text="${client.getBalance()}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="/static/js/script.js"></script>
+</body>
+</html>

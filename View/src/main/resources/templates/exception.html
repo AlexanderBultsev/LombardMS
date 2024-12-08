@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Исключение</title>
+    <link type="image/x-icon" href="/static/img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+<nav th:replace="~{frag :: nav}"></nav>
+
+<main>
+    <div class="warn column framed">
+        <strong>Исключение</strong>
+        <div th:text="${message}"></div>
+    </div>
+</main>
+</body>
+</html>

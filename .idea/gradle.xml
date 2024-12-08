@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Client" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Client" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Eureka" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Eureka" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Loan" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Loan" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Property" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Property" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/Proxy" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/Proxy" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/View" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/View" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

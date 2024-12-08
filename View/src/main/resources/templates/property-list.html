@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Имущество</title>
+    <link type="image/x-icon" href="/static/img/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+<nav th:replace="~{frag :: nav}"></nav>
+
+<main>
+    <div class="row framed w100">
+        <strong>Имущество</strong>
+    </div>
+
+    <div class="column" th:switch="${properties.size()}">
+        <div class="info framed" th:case="0">Нет имущества</div>
+        <div class="row framed" th:each="property : ${properties}">
+            <div>
+                <strong>name</strong>
+                <div th:text="${property.getName()}"></div>
+            </div>
+            <div>
+                <strong>price</strong>
+                <div th:text="${property.getPrice()}"></div>
+            </div>
+            <a class="blue-btn align-right" th:href="@{/property-detail/{id}/(id=${property.getId()})}">→</a>
+        </div>
+    </div>
+</main>
+<script src="/static/js/script.js"></script>
+</body>
+</html>
